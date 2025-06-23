@@ -2,134 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Video Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drive Video Gallery</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      text-align: center;
-      padding: 1rem;
-      margin: 0;
-      background-color: #222;
-    }
-
+    body { margin:0; font-family:sans-serif; background:#111; color:#eee; }
+    header { text-align:center; padding:2rem 1rem; background:#222; }
+    header h1 { margin:0; font-size:2rem; }
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 2rem;
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap:1rem; padding:1rem;
     }
-
     .thumbnail {
-      width: 300px;
-      height: 180px;
-      background-color: #333;
-      background-size: cover;
-      background-position: center;
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s;
-      position: relative;
+      position:relative; border-radius:8px; overflow:hidden;
+      cursor:pointer; transition: transform .2s;
+      background:#333 center/cover no-repeat;
+      height:0; padding-bottom:56.25%;
     }
-
-    .thumbnail:hover {
-      transform: scale(1.05);
-    }
-
+    .thumbnail:hover { transform:scale(1.03); }
     .thumbnail::after {
-      content: "▶";
-      font-size: 3rem;
-      color: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.8;
+      content:'▶'; position:absolute;
+      top:50%; left:50%;
+      transform:translate(-50%,-50%);
+      color:rgba(255,255,255,.8); font-size:3rem;
+      pointer-events:none;
     }
-
     .video-modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      display:none; position:fixed; inset:0;
+      background:rgba(0,0,0,.9);
+      justify-content:center; align-items:center;
+      z-index:999;
     }
-
     .video-modal iframe {
-      width: 90%;
-      max-width: 960px;
-      height: 540px;
-      border: none;
-      border-radius: 8px;
+      width:90%; max-width:960px;
+      height:90%; max-height:540px;
+      border:none; border-radius:8px;
     }
-
     .close-btn {
-      color: white;
-      margin-top: 20px;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .thumbnail {
-        width: 90vw;
-        height: 50vw;
-      }
-
-      .video-modal iframe {
-        width: 95%;
-        height: 60vw;
-      }
+      position:absolute; top:1rem; right:1rem;
+      color:#fff; background:#444; border:none;
+      font-size:1.5rem; padding:.5rem 1rem;
+      cursor:pointer; border-radius:4px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Video Gallery</h1>
+  <header>
+    <h1>My Drive Video Gallery</h1>
+  </header>
 
   <div class="gallery">
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1ls32AJG5z2v6xYF5BVANpR20ja_mWizj')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1k_YedIhod45N8pTns62XV_w6SaeJfrMo')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O')"></div>
-    <div class="thumbnail" style="background-image: url('https://img.icons8.com/color/480/video.png')" onclick="openVideo('1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m')"></div>
+    <div class="thumbnail" style="background-image:url('https://via.placeholder.com/480x270?text=Video+1')" onclick="openVideo('1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e')"></div>
+    <div class="thumbnail" style="background-image:url('https://via.placeholder.com/480x270?text=Video+2')" onclick="openVideo('1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO')"></div>
+    <div class="thumbnail" style="background-image:url('https://via.placeholder.com/480x270?text=Video+3')" onclick="openVideo('1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O')"></div>
+    <div class="thumbnail" style="background-image:url('https://via.placeholder.com/480x270?text=Video+4')" onclick="openVideo('1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m')"></div>
+    <div class="thumbnail" style="background-image:url('https://via.placeholder.com/480x270?text=Video+5')" onclick="openVideo('1lIzGdCmjpW1ChCmMP1TS23aE9NPHYMUL')"></div>
   </div>
 
-  <div id="videoModal" class="video-modal" onclick="closeVideo()">
+  <div id="videoModal" class="video-modal" onclick="closeVideo(event)">
     <iframe id="videoFrame" allowfullscreen allow="autoplay"></iframe>
-    <div class="close-btn">✖ Close</div>
+    <button class="close-btn" onclick="closeVideo(event)">✖ Close</button>
   </div>
 
   <script>
     function openVideo(fileId) {
-      const iframe = document.getElementById('videoFrame');
-      iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+      document.getElementById('videoFrame').src =
+        `https://drive.google.com/file/d/${fileId}/preview`;
       document.getElementById('videoModal').style.display = 'flex';
     }
-
-    function closeVideo() {
-      const iframe = document.getElementById('videoFrame');
-      iframe.src = '';
+    function closeVideo(e) {
+      e.stopPropagation();
+      document.getElementById('videoFrame').src = '';
       document.getElementById('videoModal').style.display = 'none';
     }
   </script>
