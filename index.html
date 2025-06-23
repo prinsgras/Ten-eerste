@@ -39,8 +39,8 @@
     }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
     }
     .gallery-item {
       background: white;
@@ -48,33 +48,31 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .gallery-item:hover {
       transform: translateY(-6px);
       box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
     }
-    .gallery-item a {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-    }
-    .gallery-img {
+    iframe {
       width: 100%;
-      height: 140px;
-      object-fit: cover;
-      display: block;
-      background: #ccc;
+      height: 180px;
+      border: none;
+      border-radius: 12px 12px 0 0;
+      background: #000;
     }
     .caption {
       padding: 12px 15px;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #34495e;
       text-align: center;
       user-select: none;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      background: #ecf0f1;
+      width: 100%;
+      border-radius: 0 0 12px 12px;
     }
     footer {
       text-align: center;
@@ -94,8 +92,8 @@
       header p {
         font-size: 1rem;
       }
-      .gallery-img {
-        height: 120px;
+      iframe {
+        height: 140px;
       }
     }
   </style>
@@ -111,84 +109,62 @@
       <div class="gallery-grid">
         <!-- Video 1 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4" alt="Quinn video 1" class="gallery-img" />
-            <div class="caption">Video 1</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 1</div>
         </div>
 
         <!-- Video 2 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1ls32AJG5z2v6xYF5BVANpR20ja_mWizj" alt="Quinn video 2" class="gallery-img" />
-            <div class="caption">Video 2</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 2</div>
         </div>
 
         <!-- Video 3 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D" alt="Quinn video 3" class="gallery-img" />
-            <div class="caption">Video 3</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 3</div>
         </div>
 
         <!-- Video 4 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1k_YedIhod45N8pTns62XV_w6SaeJfrMo" alt="Quinn video 4" class="gallery-img" />
-            <div class="caption">Video 4</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 4</div>
         </div>
 
-        <!-- Video 5 (You requested to delete earlier, so skip it) -->
-
-        <!-- Video 6 -->
+        <!-- Video 6 (skip video 5) -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-" alt="Quinn video 6" class="gallery-img" />
-            <div class="caption">Video 6</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 6</div>
         </div>
 
         <!-- Video 7 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO" alt="Quinn video 7" class="gallery-img" />
-            <div class="caption">Video 7</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 7</div>
         </div>
 
         <!-- Video 8 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e" alt="Quinn video 8" class="gallery-img" />
-            <div class="caption">Video 8</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 8</div>
         </div>
 
         <!-- Video 9 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY" alt="Quinn video 9" class="gallery-img" />
-            <div class="caption">Video 9</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 9</div>
         </div>
 
         <!-- Video 10 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m" alt="Quinn video 10" class="gallery-img" />
-            <div class="caption">Video 10</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 10</div>
         </div>
 
         <!-- Video 11 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O" alt="Quinn video 11" class="gallery-img" />
-            <div class="caption">Video 11</div>
-          </a>
+          <iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="caption">Video 11</div>
         </div>
       </div>
     </section>
