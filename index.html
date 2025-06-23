@@ -9,47 +9,44 @@
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f0f0f0;
-    text-align: center;
     color: #333;
+    text-align: center;
   }
   header {
-    background-color: #222;
+    background: #222;
     color: white;
-    padding: 20px 10px;
+    padding: 20px;
   }
   h1 {
     margin: 0;
-    font-weight: 700;
-    font-size: 2em;
+    font-size: 2rem;
   }
   .subtitle {
-    margin-top: 8px;
-    font-weight: 500;
-    font-size: 1.2em;
+    margin-top: 5px;
+    font-size: 1.2rem;
     color: #ccc;
   }
   main {
     max-width: 1200px;
     margin: 30px auto;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
   }
   .video-wrapper {
     background: black;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
   iframe {
     width: 100%;
     height: 180px;
     border: none;
     border-radius: 12px 12px 0 0;
-    display: block;
   }
 </style>
 </head>
@@ -62,45 +59,53 @@
 
 <main>
   <div class="container">
+
+    <!-- Video 1 -->
     <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/preview" allowfullscreen allow="fullscreen"></iframe>
+      <iframe src="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/preview" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-wrapper">
+      <iframe src="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/preview" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-wrapper">
+      <iframe src="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/preview" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="video-wrapper">
+      <iframe src="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/preview" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 5 -->
+    <div class="video-wrapper">
+      <iframe src="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/preview" allowfullscreen></iframe>
+    </div>
+
+    <!-- Additional videos -->
+    <div class="video-wrapper">
+      <iframe src="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/preview" allowfullscreen></iframe>
     </div>
 
     <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/preview" allowfullscreen allow="fullscreen"></iframe>
+      <iframe src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview" allowfullscreen></iframe>
     </div>
 
     <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/preview" allowfullscreen allow="fullscreen"></iframe>
+      <iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allowfullscreen></iframe>
     </div>
 
     <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/preview" allowfullscreen allow="fullscreen"></iframe>
+      <iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allowfullscreen></iframe>
     </div>
 
     <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/preview" allowfullscreen allow="fullscreen"></iframe>
+      <iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allowfullscreen></iframe>
     </div>
 
-    <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/preview" allowfullscreen allow="fullscreen"></iframe>
-    </div>
-
-    <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview" allowfullscreen allow="fullscreen"></iframe>
-    </div>
-
-    <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allowfullscreen allow="fullscreen"></iframe>
-    </div>
-
-    <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allowfullscreen allow="fullscreen"></iframe>
-    </div>
-
-    <div class="video-wrapper">
-      <iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allowfullscreen allow="fullscreen"></iframe>
-    </div>
   </div>
 </main>
 
