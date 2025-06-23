@@ -63,6 +63,7 @@
       height: 140px;
       object-fit: cover;
       display: block;
+      background: #ccc;
     }
     .caption {
       padding: 12px 15px;
@@ -71,6 +72,9 @@
       color: #34495e;
       text-align: center;
       user-select: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     footer {
       text-align: center;
@@ -105,59 +109,85 @@
   <main>
     <section>
       <div class="gallery-grid">
+        <!-- Video 1 -->
         <div class="gallery-item">
           <a href="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4" alt="Video / Foto 1" class="gallery-img" />
-            <div class="caption">Video / Foto 1</div>
+            <img src="https://drive.google.com/uc?export=view&id=1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4" alt="Quinn video 1" class="gallery-img" />
+            <div class="caption">Video 1</div>
           </a>
         </div>
-        <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D" alt="Video / Foto 2" class="gallery-img" />
-            <div class="caption">Video / Foto 2</div>
-          </a>
-        </div>
+
+        <!-- Video 2 -->
         <div class="gallery-item">
           <a href="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1ls32AJG5z2v6xYF5BVANpR20ja_mWizj" alt="Video / Foto 3" class="gallery-img" />
-            <div class="caption">Video / Foto 3</div>
+            <img src="https://drive.google.com/uc?export=view&id=1ls32AJG5z2v6xYF5BVANpR20ja_mWizj" alt="Quinn video 2" class="gallery-img" />
+            <div class="caption">Video 2</div>
           </a>
         </div>
+
+        <!-- Video 3 -->
+        <div class="gallery-item">
+          <a href="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/view?usp=drivesdk" target="_blank" rel="noopener">
+            <img src="https://drive.google.com/uc?export=view&id=1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D" alt="Quinn video 3" class="gallery-img" />
+            <div class="caption">Video 3</div>
+          </a>
+        </div>
+
+        <!-- Video 4 -->
         <div class="gallery-item">
           <a href="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1k_YedIhod45N8pTns62XV_w6SaeJfrMo" alt="Video / Foto 4" class="gallery-img" />
-            <div class="caption">Video / Foto 4</div>
+            <img src="https://drive.google.com/uc?export=view&id=1k_YedIhod45N8pTns62XV_w6SaeJfrMo" alt="Quinn video 4" class="gallery-img" />
+            <div class="caption">Video 4</div>
           </a>
         </div>
-        <!-- Removed Video / Foto 5 as requested -->
+
+        <!-- Video 5 (You requested to delete earlier, so skip it) -->
+
+        <!-- Video 6 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY" alt="Video / Foto 6" class="gallery-img" />
-            <div class="caption">Video / Foto 6</div>
+          <a href="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/view?usp=drivesdk" target="_blank" rel="noopener">
+            <img src="https://drive.google.com/uc?export=view&id=10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-" alt="Quinn video 6" class="gallery-img" />
+            <div class="caption">Video 6</div>
           </a>
         </div>
-        <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e" alt="Video / Foto 7" class="gallery-img" />
-            <div class="caption">Video / Foto 7</div>
-          </a>
-        </div>
+
+        <!-- Video 7 -->
         <div class="gallery-item">
           <a href="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO" alt="Video / Foto 8" class="gallery-img" />
-            <div class="caption">Video / Foto 8</div>
+            <img src="https://drive.google.com/uc?export=view&id=1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO" alt="Quinn video 7" class="gallery-img" />
+            <div class="caption">Video 7</div>
           </a>
         </div>
+
+        <!-- Video 8 -->
         <div class="gallery-item">
-          <a href="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O" alt="Video / Foto 9" class="gallery-img" />
-            <div class="caption">Video / Foto 9</div>
+          <a href="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/view?usp=drivesdk" target="_blank" rel="noopener">
+            <img src="https://drive.google.com/uc?export=view&id=1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e" alt="Quinn video 8" class="gallery-img" />
+            <div class="caption">Video 8</div>
           </a>
         </div>
+
+        <!-- Video 9 -->
+        <div class="gallery-item">
+          <a href="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/view?usp=drivesdk" target="_blank" rel="noopener">
+            <img src="https://drive.google.com/uc?export=view&id=10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY" alt="Quinn video 9" class="gallery-img" />
+            <div class="caption">Video 9</div>
+          </a>
+        </div>
+
+        <!-- Video 10 -->
         <div class="gallery-item">
           <a href="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/view?usp=drivesdk" target="_blank" rel="noopener">
-            <img src="https://drive.google.com/uc?export=view&id=1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m" alt="Video / Foto 10" class="gallery-img" />
-            <div class="caption">Video / Foto 10</div>
+            <img src="https://drive.google.com/uc?export=view&id=1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m" alt="Quinn video 10" class="gallery-img" />
+            <div class="caption">Video 10</div>
+          </a>
+        </div>
+
+        <!-- Video 11 -->
+        <div class="gallery-item">
+          <a href="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/view?usp=drivesdk" target="_blank" rel="noopener">
+            <img src="https://drive.google.com/uc?export=view&id=1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O" alt="Quinn video 11" class="gallery-img" />
+            <div class="caption">Video 11</div>
           </a>
         </div>
       </div>
