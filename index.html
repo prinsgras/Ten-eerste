@@ -1,142 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drive Video Player Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quinn’s Life</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
+      background: #f8f9fa;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #222;
-    }
-
-    h1 {
       margin: 0;
-      font-size: 2rem;
+      padding-bottom: 60px;
     }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
+    header {
+      background: #fff;
+      padding: 30px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
     }
-
-    .thumbnail {
-      position: relative;
-      cursor: pointer;
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      color: #666;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+    .gallery-img {
+      width: 100%;
+      height: auto;
       border-radius: 8px;
-      overflow: hidden;
-      background: #333 center/cover no-repeat;
-      height: 0;
-      padding-bottom: 56.25%;
-      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform .2s;
     }
-
-    .thumbnail:hover {
+    .gallery-img:hover {
       transform: scale(1.03);
     }
-
-    .thumbnail::after {
-      content: '▶';
-      position: absolute;
-      font-size: 3rem;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.9);
-      pointer-events: none;
-    }
-
-    section.video-section {
-      padding: 3rem 1rem;
-      border-top: 1px solid #333;
+    .caption {
       text-align: center;
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #555;
     }
-
-    iframe {
-      width: 90%;
-      max-width: 960px;
-      height: 540px;
-      border: none;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      iframe {
-        height: 60vw;
-      }
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #444;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    a.button:hover {
-      background-color: #666;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e9ecef;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>My Video Gallery</h1>
+    <h1>Quinn’s Life</h1>
+    <p>Een vrolijke verzameling herinneringen—spelen, groeien, lachen en leren!</p>
   </header>
 
-  <!-- 🔳 Thumbnail Section -->
-  <div class="gallery">
-    <a href="#video1" class="thumbnail" style="background-image: url('https://via.placeholder.com/480x270?text=Video+1');"></a>
-    <a href="#video2" class="thumbnail" style="background-image: url('https://via.placeholder.com/480x270?text=Video+2');"></a>
-    <a href="#video3" class="thumbnail" style="background-image: url('https://via.placeholder.com/480x270?text=Video+3');"></a>
-    <a href="#video4" class="thumbnail" style="background-image: url('https://via.placeholder.com/480x270?text=Video+4');"></a>
-    <a href="#video5" class="thumbnail" style="background-image: url('https://via.placeholder.com/480x270?text=Video+5');"></a>
-  </div>
+  <main class="container py-5">
+    <section class="mb-5">
+      <h2 class="text-center mb-3">☁️ Gedeeld via Google Drive</h2>
+      <div class="row g-4">
+        <!-- Voor elke link: thumbnail + link -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4" alt="Drive door Quinn 1" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 1</div>
+        </div>
+        <!-- Herhaal blok per Drive-bestand -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D" alt="Drive door Quinn 2" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 2</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1ls32AJG5z2v6xYF5BVANpR20ja_mWizj" alt="Drive door Quinn 3" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 3</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1k_YedIhod45N8pTns62XV_w6SaeJfrMo" alt="Drive door Quinn 4" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 4</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-" alt="Drive door Quinn 5" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 5</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY" alt="Drive door Quinn 6" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 6</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e" alt="Drive door Quinn 7" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 7</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO" alt="Drive door Quinn 8" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 8</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O" alt="Drive door Quinn 9" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 9</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/view?usp=drivesdk" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m" alt="Drive door Quinn 10" class="gallery-img">
+          </a>
+          <div class="caption">Video / Foto 10</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- 🎥 Embedded Video Sections -->
-  <section id="video1" class="video-section">
-    <h2>Video 1</h2>
-    <iframe src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview" allowfullscreen allow="autoplay"></iframe>
-    <br><a class="button" href="#">⬆ Back to Top</a>
-  </section>
-
-  <section id="video2" class="video-section">
-    <h2>Video 2</h2>
-    <iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allowfullscreen allow="autoplay"></iframe>
-    <br><a class="button" href="#">⬆ Back to Top</a>
-  </section>
-
-  <section id="video3" class="video-section">
-    <h2>Video 3</h2>
-    <iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allowfullscreen allow="autoplay"></iframe>
-    <br><a class="button" href="#">⬆ Back to Top</a>
-  </section>
-
-  <section id="video4" class="video-section">
-    <h2>Video 4</h2>
-    <iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allowfullscreen allow="autoplay"></iframe>
-    <br><a class="button" href="#">⬆ Back to Top</a>
-  </section>
-
-  <section id="video5" class="video-section">
-    <h2>Video 5</h2>
-    <iframe src="https://drive.google.com/file/d/1lIzGdCmjpW1ChCmMP1TS23aE9NPHYMUL/preview" allowfullscreen allow="autoplay"></iframe>
-    <br><a class="button" href="#">⬆ Back to Top</a>
-  </section>
-
+  <footer>
+    © 2025 Quinn’s Life — Gemaakt met ❤️
+  </footer>
 </body>
 </html>
