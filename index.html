@@ -7,14 +7,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      text-align: center;
+      background: #f4f4f4;
     }
 
     h1 {
-      padding: 20px;
-      background: #333;
+      background-color: #333;
       color: white;
+      padding: 20px;
+      text-align: center;
       margin: 0;
     }
 
@@ -25,20 +25,36 @@
       padding: 20px;
     }
 
-    .video-tile iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: none;
-      border-radius: 10px;
-      transition: transform 0.2s;
-    }
-
-    .video-tile iframe:hover {
-      transform: scale(1.02);
+    .video-tile {
+      position: relative;
       cursor: pointer;
     }
 
+    .video-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 10px;
+      background: black;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: white;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .video-tile:hover .video-thumb {
+      filter: brightness(80%);
+    }
+
     .footer {
+      text-align: center;
       padding: 20px;
       background: #333;
       color: white;
@@ -51,18 +67,60 @@
 
   <div class="container">
 
-    
-    <div class="video-tile">
-      <iframe src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview" allowfullscreen></iframe>
+    <!-- Each tile opens a full Google Drive video -->
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
     </div>
-    <div class="video-tile">
-      <iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allowfullscreen></iframe>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
     </div>
-    <div class="video-tile">
-      <iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allowfullscreen></iframe>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
     </div>
-    <div class="video-tile">
-      <iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allowfullscreen></iframe>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1mIfO2dQ_QNa3FNPPHrpjU75MUQgmN0QM/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="video-tile" onclick="window.open('https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/view', '_blank')">
+      <img class="video-thumb" src="https://img.icons8.com/ios-filled/500x/video.png" alt="Video">
+      <div class="play-button">▶</div>
     </div>
 
   </div>
