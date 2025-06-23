@@ -1,184 +1,95 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>📸 Quinn groeit van 2 naar 3 jaar 🎥</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Quinn's Adventures – All in NL</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e8f5e9;
       margin: 0;
-      padding-bottom: 60px;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
     }
-    .moving-cars-container {
-      position: relative;
-      height: 60px;
-      background: #a5d6a7;
-      overflow: hidden;
+
+    h1 {
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin: 0;
     }
-    .car { position: absolute; font-size: 2rem; top: 15px; animation: drive 8s linear infinite; }
-    .car-1 { left: -20%; animation-delay: 0s; }
-    .car-2 { left: -40%; animation-delay: 3s; }
-    .car-3 { left: -60%; animation-delay: 6s; }
-    @keyframes drive { 0% { transform: translateX(0); } 100% { transform: translateX(110vw); } }
-    .gallery-img,
-    .video-preview {
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .video-tile iframe {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-      transition: transform .2s;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 10px;
+      transition: transform 0.2s;
     }
-    .gallery-img:hover,
-    .video-preview:hover { transform: scale(1.02); }
-    .section-title { text-align: center; margin: 30px 0 10px; color: #2e7d32; }
-    .section-subtitle { text-align: center; margin-bottom: 30px; color: #4caf50; }
-    .caption { text-align: center; font-size: .9rem; color: #555; margin-top: 6px; }
-    footer { text-align: center; padding: 20px; background: #c8e6c9; color: #333; position: fixed; bottom: 0; width: 100%; }
+
+    .video-tile iframe:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .footer {
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Bewegende auto's -->
-  <div class="moving-cars-container">
-    <div class="car car-1">🚗</div>
-    <div class="car car-2">🚙</div>
-    <div class="car car-3">🏎️</div>
+  <h1>Quinn's Adventures – All in NL</h1>
+
+  <div class="container">
+
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1mIfO2dQ_QNa3FNPPHrpjU75MUQgmN0QM/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allowfullscreen></iframe>
+    </div>
+    <div class="video-tile">
+      <iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allowfullscreen></iframe>
+    </div>
+
   </div>
 
-  <header class="py-4 bg-light">
-    <div class="container">
-      <h1 class="section-title">👶 Quinn groeit van 2 naar 3 jaar</h1>
-      <p class="section-subtitle">Een reis vol lachen, ontdekken en kleine avonturen</p>
-    </div>
-  </header>
+  <div class="footer">
+    <p>Subscribe to follow more of Quinn's adventures!</p>
+  </div>
 
-  <!-- Foto's sectie -->
-  <section class="py-4">
-    <div class="container">
-      <h2 class="section-title">📁 Mooiste Foto’s</h2>
-      <p class="section-subtitle">Herinneringen uit Attached_assets</p>
-      <div class="row g-4">
-        <!-- Lokale foto’s -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0000.jpg" alt="IMG-0000" class="gallery-img">
-          <div class="caption">IMG‑0000 – Quinn speelt buiten</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0001.jpg" alt="IMG-0001" class="gallery-img">
-          <div class="caption">IMG‑0001 – Zijn stralende lach</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0002.jpg" alt="IMG-0002" class="gallery-img">
-          <div class="caption">IMG‑0002 – Klein maar moedig</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0003.jpg" alt="IMG-0003" class="gallery-img">
-          <div class="caption">IMG‑0003 – Smakelijk eetmoment</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0004.jpg" alt="IMG-0004" class="gallery-img">
-          <div class="caption">IMG‑0004 – Spelen in de tuin</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0005.jpg" alt="IMG-0005" class="gallery-img">
-          <div class="caption">IMG‑0005 – Zijn favoriete knuffel</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0006.jpg" alt="IMG-0006" class="gallery-img">
-          <div class="caption">IMG‑0006 – Avontuur op het strand</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="Attached_assets/IMG-20250615-WA0007.jpg" alt="IMG-0007" class="gallery-img">
-          <div class="caption">IMG‑0007 – Een grote glimlach</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Video sectie -->
-  <section class="py-4 bg-light">
-    <div class="container">
-      <h2 class="section-title">🎥 Video Momenten</h2>
-      <p class="section-subtitle">Quinn in actie – gedeeld via Google Drive</p>
-      <div class="row g-4">
-        <!-- Video previews -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4" alt="Video 1" class="video-preview">
-          </a>
-          <div class="caption">Video 1 – Spelende Quinn</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D" alt="Video 2" class="video-preview">
-          </a>
-          <div class="caption">Video 2 – Samen op stap</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1ls32AJG5z2v6xYF5BVANpR20ja_mWizj" alt="Video 3" class="video-preview">
-          </a>
-          <div class="caption">Video 3 – Eerste stapjes</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1mIfO2dQ_QNa3FNPPHrpjU75MUQgmN0QM/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1mIfO2dQ_QNa3FNPPHrpjU75MUQgmN0QM" alt="Video 4" class="video-preview">
-          </a>
-          <div class="caption">Video 4 – Energieke sprongen</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1k_YedIhod45N8pTns62XV_w6SaeJfrMo" alt="Video 5" class="video-preview">
-          </a>
-          <div class="caption">Video 5 – Lachen met vriendjes</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-" alt="Video 6" class="video-preview">
-          </a>
-          <div class="caption">Video 6 – Buitenpret</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e" alt="Video 7" class="video-preview">
-          </a>
-          <div class="caption">Video 7 – Ontdekkingsreis</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO" alt="Video 8" class="video-preview">
-          </a>
-          <div class="caption">Video 8 – Even rusten</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY" alt="Video 9" class="video-preview">
-          </a>
-          <div class="caption">Video 9 – Stralende glimlach</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O" alt="Video 10" class="video-preview">
-          </a>
-          <div class="caption">Video 10 – Trampoline pret</div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/view" target="_blank">
-            <img src="https://drive.google.com/uc?export=view&id=1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m" alt="Video 11" class="video-preview">
-          </a>
-          <div class="caption">Video 11 – Spelen met vriendjes</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Quinn groeit door – elke dag vol plezier en ontdekkingen 🌱</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
