@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quinn’s Life</title>
+  <title>Quinn’s Life — Drive iframe videos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
@@ -47,21 +47,15 @@
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .gallery-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
     }
     iframe {
       width: 100%;
       height: 280px;
       border-radius: 12px 12px 0 0;
       border: none;
-      background: #000;
     }
     .caption {
       padding: 12px 15px;
@@ -69,10 +63,10 @@
       font-size: 1.1rem;
       color: #34495e;
       text-align: center;
-      user-select: none;
       background: #ecf0f1;
       width: 100%;
       border-radius: 0 0 12px 12px;
+      user-select: none;
     }
     footer {
       text-align: center;
@@ -85,152 +79,110 @@
       bottom: 0;
       box-shadow: 0 -4px 15px rgba(52, 152, 219, 0.5);
     }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Quinn’s Life</h1>
-    <p>Een vrolijke verzameling herinneringen — spelen, groeien, lachen en leren!</p>
-  </header>
 
-  <main>
-    <section>
-      <div class="gallery-grid">
+<header>
+  <h1>Quinn’s Life</h1>
+  <p>Een vrolijke verzameling herinneringen — spelen, groeien, lachen en leren!</p>
+</header>
 
-        <!-- Video 1 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1mHSAFxZDGco8dQ-90wn8MdO7Uq2NjWQ4/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 1"
-          ></iframe>
-          <div class="caption">Video 1</div>
-        </div>
+<main>
+  <section>
+    <div class="gallery-grid">
 
-        <!-- Video 2 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 2"
-          ></iframe>
-          <div class="caption">Video 2</div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 3"
-          ></iframe>
-          <div class="caption">Video 3</div>
-        </div>
-
-        <!-- Video 4 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 4"
-          ></iframe>
-          <div class="caption">Video 4</div>
-        </div>
-
-        <!-- Video 6 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 6"
-          ></iframe>
-          <div class="caption">Video 6</div>
-        </div>
-
-        <!-- Video 7 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 7"
-          ></iframe>
-          <div class="caption">Video 7</div>
-        </div>
-
-        <!-- Video 8 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 8"
-          ></iframe>
-          <div class="caption">Video 8</div>
-        </div>
-
-        <!-- Video 9 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 9"
-          ></iframe>
-          <div class="caption">Video 9</div>
-        </div>
-
-        <!-- Video 10 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 10"
-          ></iframe>
-          <div class="caption">Video 10</div>
-        </div>
-
-        <!-- Video 11 -->
-        <div class="gallery-item">
-          <iframe
-            src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            title="Video 11"
-          ></iframe>
-          <div class="caption">Video 11</div>
-        </div>
-
+      <!-- Video 1 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/1lnbGowYOsVGv0OctA56RLEE1X4RRLN5D/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 1"
+        ></iframe>
+        <div class="caption">Video 1</div>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    © 2025 Quinn’s Life — Gemaakt met ❤️
-  </footer>
+      <!-- Video 2 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/1ls32AJG5z2v6xYF5BVANpR20ja_mWizj/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 2"
+        ></iframe>
+        <div class="caption">Video 2</div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/1k_YedIhod45N8pTns62XV_w6SaeJfrMo/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 3"
+        ></iframe>
+        <div class="caption">Video 3</div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/10FBRfXGbdTY-iY974mI6Max5nRh4Rk3-/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 4"
+        ></iframe>
+        <div class="caption">Video 4</div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/10A7UTKoXaRqIddXJpnA5h1gRiuvBWCOY/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 5"
+        ></iframe>
+        <div class="caption">Video 5</div>
+      </div>
+
+      <!-- Video 6 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/1--RtinCyOVvNwmvthDhZG2JcwHcvHH-e/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 6"
+        ></iframe>
+        <div class="caption">Video 6</div>
+      </div>
+
+      <!-- Video 7 -->
+      <div class="gallery-item">
+        <iframe
+          src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview"
+          allow="autoplay; encrypted-media; fullscreen"
+          allowfullscreen
+          loading="lazy"
+          title="Video 7"
+        ></iframe>
+        <div class="caption">Video 7</div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Quinn’s Life — Gemaakt met ❤️
+</footer>
+
 </body>
 </html>
