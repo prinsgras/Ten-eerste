@@ -1,147 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Greazy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quinn Fotogalerij</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'zing_rust_demobase';
-      src: url('http://greazy.nl//fonts/zingrustdemo-base-webfont.eot');
-      src: url('http://greazy.nl//fonts/zingrustdemo-base-webfont.eot?#iefix') format('embedded-opentype'),
-           url('http://greazy.nl//fonts/zingrustdemo-base-webfont.woff2') format('woff2'),
-           url('http://greazy.nl/fonts/zingrustdemo-base-webfont.woff') format('woff'),
-           url('http://greazy.nl/fonts/zingrustdemo-base-webfont.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'zing_rust_demoshadow1';
-      src: url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.eot');
-      src: url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.eot?#iefix') format('embedded-opentype'),
-           url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.woff2') format('woff2'),
-           url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.woff') format('woff'),
-           url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-    }
-    body {
-      background-image: url(http://greazy.nl/Greazy-Background.jpg);
-      background-repeat-y: repeat;
-      font-family: 'zing_rust_demobase', Arial, sans-serif;
-    }
-    .container {
-      width: 50vw;
-      margin: 6vh auto 0 auto;
-      background: #53d5e1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 10px;
-    }
-    img.lady.reponsive {
-      width: 40%;
-      height: auto;
-      margin-top: 20px;
-    }
-    .pijl {
-      background-image: url(http://greazy.nl/pijltje.png);
-      background-size: 200px;
-      display: flex;
-      width: 280px;
-      height: 180px;
-      background-repeat: no-repeat;
-      justify-content: center;
-      align-items: center;
-      margin-top: -15px;
-      background-position: 35px;
-    }
-    .pijl a {
-      font-size: 1.75em !important;
-      font-family: 'zing_rust_demobase', Arial, sans-serif;
-      color: #53d5e1 !important;
-      text-decoration: none;
-    }
-    .adres {
-      margin: -20px 0 20px 0;
-      text-align: center;
-      color: white !important;
-      font-family: 'zing_rust_demobase', Arial, sans-serif;
-    }
-    .adres a {
-      color: white !important;
-      font-family: 'zing_rust_demobase', Arial, sans-serif;
-      text-decoration: underline;
-    }
-    .social {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .social img {
-      width: 25px;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 0;
-      border-radius: 0 0 10px 10px;
-    }
-    @media (max-width: 767.98px) {
-      .container {
-        width: 90vw;
-      }
-      img.lady.reponsive {
-        width: 90%;
-      }
-      iframe {
-        height: 400px;
-      }
-    }
+    .gallery-img { width:100%; height:auto; border-radius:8px; transition:transform .3s; }
+    .gallery-img:hover { transform: scale(1.03); }
+    section { padding:50px 0; }
+    h2 { margin-bottom:25px; }
   </style>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
   <div class="container">
-    <img src="http://greazy.nl/lady.png" class="lady reponsive" alt="Greazy logo" />
-
-    <div class="pijl">
-      <a href="https://butlaroo.app/place/9Q7dQ" target="_blank" rel="noopener noreferrer">Menu Kaart</a>
+    <a class="navbar-brand" href="#home"><i class="fas fa-child me-2"></i>Quinn groeit op!</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Thuis</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galerij"><i class="fas fa-images me-1"></i>Galerij</a></li>
+        <li class="nav-item"><a class="nav-link" href="#drive-bestanden"><i class="fas fa-video me-1"></i>Video's</a></li>
+      </ul>
     </div>
-
-    <div class="pijl">
-      <a href="https://prinsgras.github.io/333333/" target="_blank" rel="noopener noreferrer">Greazy Videos</a>
-    </div>
-
-    <div class="adres">
-      <p>
-        Overtoom 344 | 1054 JG | Amsterdam<br />
-        <a href="tel:0031687235684" style="color:black !important;">06 87 23 56 84</a><br />
-        <a href="mailto:info@greazy.nl" class="mail">Mail ons: info@greazy.nl</a>
-      </p>
-    </div>
-
-    <div class="social">
-      <a href="https://www.facebook.com/greazy020/" target="_blank" rel="noopener noreferrer"><img src="http://greazy.nl/facebook.png" alt="Facebook" /></a>
-      <a href="https://www.instagram.com/greazy020/" target="_blank" rel="noopener noreferrer"><img src="http://greazy.nl/insta.png" alt="Instagram" /></a>
-      <a href="https://www.snapchat.com/add/greazy020" target="_blank" rel="noopener noreferrer"><img src="http://greazy.nl/snapchat.png" alt="Snapchat" /></a>
-    </div>
-
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2436.574099597897!2d4.8680679!3d52.3600094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e209da96ac83%3A0x6183bd1ed6dbef05!2sGreazy!5e0!3m2!1sen!2snl!4v1606773158515!5m2!1sen!2snl"
-      allowfullscreen
-      aria-hidden="false"
-      tabindex="0"
-    ></iframe>
   </div>
+</nav>
+<div style="height:70px;"></div>
+
+<section id="galerij" class="container">
+  <h1 class="text-center mb-5">Fotogalerij Quinn</h1>
+
+  <!-- Sectie: Rennen, Springen, Spelen (4+ rest) -->
+  <section>
+    <h2>Rennen, Springen, Spelen</h2>
+    <div class="row g-3">
+      <div class="col-md-3"><a href="Attached_assets/-20250417-WA0000.jpg" data-lightbox="rennen"><img src="Attached_assets/-20250417-WA0000.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250530-WA0005.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250530-WA0005.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250530-WA0007(1).jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250530-WA0007(1).jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250530-WA0008.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250530-WA0008.jpg" class="gallery-img" alt=""></a></div>
+
+      <!-- Rest onder rennen -->
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0006.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250603-WA0006.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0013.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250603-WA0013.jpg" class="gallery-img" alt=""></a></div>
+    </div>
+  </section>
+
+  <!-- Sectie: Groot Worden -->
+  <section>
+    <h2>Groot Worden</h2>
+    <div class="row g-3">
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0002.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0002.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0003.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0003.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0004.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0004.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0005.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0005.jpg" class="gallery-img" alt=""></a></div>
+    </div>
+  </section>
+
+  <!-- Sectie: Samen Groeien -->
+  <section>
+    <h2>Samen Groeien</h2>
+    <div class="row g-3">
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0007.jpg" data-lightbox="groeien"><img src="Attached_assets/IMG-20250603-WA0007.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0008.jpg" data-lightbox="groeien"><img src="Attached_assets/IMG-20250603-WA0008.jpg" class="gallery-img" alt=""></a></div>
+    </div>
+  </section>
+
+  <!-- Sectie: Samen met Mama & Papa -->
+  <section>
+    <h2>Samen met Mama & Papa</h2>
+    <div class="row g-3">
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0009.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0009.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0010.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0010.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0011.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0011.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0014.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0014.jpg" class="gallery-img" alt=""></a></div>
+      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0015.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0015.jpg" class="gallery-img" alt=""></a></div>
+    </div>
+  </section>
+</section>
+
+<section class="container section-padding bg-light" id="drive-bestanden">
+  <h2 class="text-center mb-4">🎬 Quinn's Video Momenten</h2>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1klQ2sGy9Zce9lAj_DBUOKSX90F3fsJqG/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1ku4N_2tZZ8EqWLm_vcQ5h5lU6QH6eFRJ/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1kwHs0HZeKhnHSjdl2YE-miXPmGNYLQt8/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1lvmTiSLDV0tetMTk9McAbKUYumR3rmCK/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1llLtynwrbAp7dy0j_5SYz44TJM97tgS-/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allow="autoplay; fullscreen"></iframe></div></div>
+    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allow="autoplay; fullscreen"></iframe></div></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 </body>
 </html>
