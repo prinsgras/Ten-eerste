@@ -1,221 +1,147 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Quinn is 2 Jaar - Wordt Binnenkort 3!</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;500&amp;family=Comic+Neue:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greazy</title>
+  <style>
+    @font-face {
+      font-family: 'zing_rust_demobase';
+      src: url('http://greazy.nl//fonts/zingrustdemo-base-webfont.eot');
+      src: url('http://greazy.nl//fonts/zingrustdemo-base-webfont.eot?#iefix') format('embedded-opentype'),
+           url('http://greazy.nl//fonts/zingrustdemo-base-webfont.woff2') format('woff2'),
+           url('http://greazy.nl/fonts/zingrustdemo-base-webfont.woff') format('woff'),
+           url('http://greazy.nl/fonts/zingrustdemo-base-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'zing_rust_demoshadow1';
+      src: url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.eot');
+      src: url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.eot?#iefix') format('embedded-opentype'),
+           url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.woff2') format('woff2'),
+           url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.woff') format('woff'),
+           url('http://greazy.nl/fonts/zingrustdemo-sh1-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+    body {
+      background-image: url(http://greazy.nl/Greazy-Background.jpg);
+      background-repeat-y: repeat;
+      font-family: 'zing_rust_demobase', Arial, sans-serif;
+    }
+    .container {
+      width: 50vw;
+      margin: 6vh auto 0 auto;
+      background: #53d5e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+    }
+    img.lady.reponsive {
+      width: 40%;
+      height: auto;
+      margin-top: 20px;
+    }
+    .pijl {
+      background-image: url(http://greazy.nl/pijltje.png);
+      background-size: 200px;
+      display: flex;
+      width: 280px;
+      height: 180px;
+      background-repeat: no-repeat;
+      justify-content: center;
+      align-items: center;
+      margin-top: -15px;
+      background-position: 35px;
+    }
+    .pijl a {
+      font-size: 1.75em !important;
+      font-family: 'zing_rust_demobase', Arial, sans-serif;
+      color: #53d5e1 !important;
+      text-decoration: none;
+    }
+    .adres {
+      margin: -20px 0 20px 0;
+      text-align: center;
+      color: white !important;
+      font-family: 'zing_rust_demobase', Arial, sans-serif;
+    }
+    .adres a {
+      color: white !important;
+      font-family: 'zing_rust_demobase', Arial, sans-serif;
+      text-decoration: underline;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .social img {
+      width: 25px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 0;
+      border-radius: 0 0 10px 10px;
+    }
+    @media (max-width: 767.98px) {
+      .container {
+        width: 90vw;
+      }
+      img.lady.reponsive {
+        width: 90%;
+      }
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
   <div class="container">
-    <a class="navbar-brand" href="#home"><i class="fas fa-child me-2"></i>Quinn groeit op!</a>
-    <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Thuis</a></li>
-        <li class="nav-item"><a class="nav-link" href="#dagje-uit"><i class="fas fa-camera me-1"></i>Dagje Uit</a></li>
-        <li class="nav-item"><a class="nav-link" href="#samen-eten"><i class="fas fa-utensils me-1"></i>Samen Eten</a></li>
-        <li class="nav-item"><a class="nav-link" href="#spelen"><i class="fas fa-toys me-1"></i>Spelen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galerij"><i class="fas fa-images me-1"></i>Alle Foto's</a></li>
-      </ul>
+    <img src="http://greazy.nl/lady.png" class="lady reponsive" alt="Greazy logo" />
+
+    <div class="pijl">
+      <a href="https://butlaroo.app/place/9Q7dQ" target="_blank" rel="noopener noreferrer">Menu Kaart</a>
     </div>
+
+    <div class="pijl">
+      <a href="https://prinsgras.github.io/333333/" target="_blank" rel="noopener noreferrer">Greazy Videos</a>
+    </div>
+
+    <div class="adres">
+      <p>
+        Overtoom 344 | 1054 JG | Amsterdam<br />
+        <a href="tel:0031687235684" style="color:black !important;">06 87 23 56 84</a><br />
+        <a href="mailto:info@greazy.nl" class="mail">Mail ons: info@greazy.nl</a>
+      </p>
+    </div>
+
+    <div class="social">
+      <a href="https://www.facebook.com/greazy020/" target="_blank" rel="noopener noreferrer"><img src="http://greazy.nl/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/greazy020/" target="_blank" rel="noopener noreferrer"><img src="http://greazy.nl/insta.png" alt="Instagram" /></a>
+      <a href="https://www.snapchat.com/add/greazy020" target="_blank" rel="noopener noreferrer"><img src="http://greazy.nl/snapchat.png" alt="Snapchat" /></a>
+    </div>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2436.574099597897!2d4.8680679!3d52.3600094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e209da96ac83%3A0x6183bd1ed6dbef05!2sGreazy!5e0!3m2!1sen!2snl!4v1606773158515!5m2!1sen!2snl"
+      allowfullscreen
+      aria-hidden="false"
+      tabindex="0"
+    ></iframe>
   </div>
-</nav>
-
-<div class="moving-cars-container">
-  <div class="car car-1">🚗</div>
-  <div class="car car-2">🚙</div>
-  <div class="car car-3">🚐</div>
-  <div class="car car-4">🏎️</div>
-  <div class="car car-5">🚕</div>
-</div>
-
-<section class="hero-section" id="home">
-  <div class="container">
-    <div class="row align-items-center min-vh-100">
-      <div class="col-lg-6">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="birthday-number colorful-text">2</span>
-            <span class="birthday-text colorful-text">Jaar Quinn!</span>
-          </h1>
-          <p class="hero-subtitle">Quinn is 2 jaar en wordt binnenkort 3!</p>
-          <p class="hero-description">
-            Welkom op Quinn's speciale website! Onze kleine Quinn groeit zo snel en houdt van spelen, rennen en springen. Samen met mama en papa beleeft hij de leukste avonturen. Hier delen we al zijn mooie momenten terwijl hij groeit en ontdekt!
-          </p>
-          <div class="hero-buttons">
-            <a class="btn btn-primary btn-lg me-3" href="#galerij"><i class="fas fa-images me-2"></i>Bekijk Foto's</a>
-            <a class="btn btn-outline-primary btn-lg" href="#dagje-uit"><i class="fas fa-running me-2"></i>Quinn Groeit Op</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="hero-image">
-          <div class="birthday-balloon balloon-1"></div>
-          <div class="birthday-balloon balloon-2"></div>
-          <div class="birthday-balloon balloon-3"></div>
-          <div class="birthday-cake-icon"><i class="fas fa-birthday-cake"></i></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-padding bg-light-blue" id="dagje-uit">
-  <div class="container">
-    <div class="row">
-      <div class="col-12"><h2 class="section-title">Quinn Groeit en Speelt</h2><p class="section-subtitle">Onze kleine jongen wordt zo groot!</p></div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 mb-4">
-        <div class="story-card">
-          <h3><i class="fas fa-playground me-2"></i>Rennen, Springen en Spelen</h3>
-          <p>Quinn houdt zo van spelen! Hij rent door de speelhal, springt in de glijbaan en klimt overal op. "Kijk mama en papa, wat ik kan!" roept hij trots. Elke dag wordt hij sterker en leuker. Quinn groeit zo snel en ontdekt steeds meer.</p>
-          <div class="photo-grid">
-            <!-- origineel story photos -->
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4">
-        <div class="story-card">
-          <h3><i class="fas fa-utensils me-2"></i>Groot Worden</h3>
-          <p>Quinn wordt elke dag een beetje groter! Hij eet nu zelf aan tafel en kan al zoveel. "Ik ben groot!" zegt hij trots tegen mama en papa. Ze zijn zo blij om te zien hoe hun kleine jongen groeit van 2 jaar naar binnenkort 3 jaar. Wat een avontuur!</p>
-          <div class="photo-grid">
-            <!-- origineel story photos -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-padding bg-light-yellow" id="samen-eten">
-  <div class="container">
-    <div class="row">
-      <div class="col-12"><h2 class="section-title">Samen met Mama en Papa</h2><p class="section-subtitle">De mooiste momenten samen</p></div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <div class="story-card">
-          <h3><i class="fas fa-heart me-2"></i>Samen Groeien</h3>
-          <p>Quinn groeit elke dag en mama en papa zijn zo trots! Hij speelt met vriendjes, eet samen aan tafel en deelt alles. "Ik ben al groot!" zegt hij tegen mama en papa. Van 2 jaar naar bijna 3 jaar - wat een reis! Hij houdt van rennen, springen en spelen.</p>
-          <p>Mama en papa zien hun kleine jongen groeien en het is zo mooi om te zien. Elke dag brengt nieuwe avonturen en Quinn wordt steeds groter en sterker.</p>
-          <div class="photo-grid large-grid">
-            <!-- origineel story photos -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-padding bg-light-green" id="spelen">
-  <div class="container">
-    <div class="row">
-      <div class="col-12"><h2 class="section-title">Spelen &amp; Groeien</h2><p class="section-subtitle">Quinn's energie en groei</p></div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 mb-4">
-        <div class="story-card">
-          <h3><i class="fas fa-running me-2"></i>Rennen en Springen</h3>
-          <p>Quinn houdt van bewegen! Hij rent door de speelhal met zijn vriendjes en springt overal op. "Kijk mama en papa, ik kan springen!" roept hij blij. Hij groeit van 2 naar 3 jaar en wordt steeds avontuurlijker. Rennen, spelen en ontdekken - dat is wat Quinn het leukst vindt!</p>
-          <div class="photo-grid">
-            <!-- origineel story photos -->
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4">
-        <div class="story-card">
-          <h3><i class="fas fa-home me-2"></i>Samen met Mama en Papa</h3>
-          <p>Thuis met mama en papa is het allerleukst! Quinn klimt, speelt en ontdekt elke dag iets nieuws. "Mama, papa, kijk!" roept hij terwijl hij laat zien hoe groot hij al is. Van 2 jaar naar bijna 3 - hij groeit zo snel en mama en papa genieten van elke dag.</p>
-          <div class="photo-grid">
-            <!-- origineel story photos -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-padding bg-light-red" id="galerij">
-  <div class="container">
-    <div class="row"><div class="col-12"><h2 class="section-title">Quinn Groeit Op</h2><p class="section-subtitle">Van 2 jaar naar 3 - alle mooie momenten</p></div></div>
-    <div class="row g-3">
-      <!-- Ingevoegde /assets/Photos/ foto's -->
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250528-WA0005.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250528-WA0005.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250528-WA0006.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250528-WA0006.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250530-WA0005.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250530-WA0005.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250530-WA0008.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250530-WA0008.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0002.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0002.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0005.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0005.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0006.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0006.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0039.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0039.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0040.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0040.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0041.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0041.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250603-WA0042.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250603-WA0042.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250615-WA0000.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250615-WA0000.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250615-WA0001.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250615-WA0001.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250615-WA0002.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250615-WA0002.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250615-WA0003.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250615-WA0003.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250615-WA0004.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250615-WA0004.jpg"/></a></div>
-      <div class="col-lg-3 col-md-4 col-sm-6"><a data-lightbox="gallery" href="assets/Photos/IMG-20250615-WA0005.jpg"><img class="img-fluid rounded gallery-img" src="assets/Photos/IMG-20250615-WA0005.jpg"/></a></div>
-
-      <!-- Laat de bestaande 17 galerij-items onaangepast -->
-      <!-- … hier komen de originele 17 <div class="col-lg-3…"> items te staan … -->
-    </div>
-  </div>
-</section>
-
-<section class="section-padding bg-gradient-love">
-  <div class="container">
-    <div class="row"><div class="col-lg-8 mx-auto text-center">
-      <div class="love-message">
-        <h2>💕 Van Papa &amp; Mama 💕</h2>
-        <p class="lead">Lieve Quinn, onze kleine held! …</p>
-        <p class="lead">We houden van je avontuurlijke spirit, …</p>
-        <div class="hearts"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></div>
-      </div>
-    </div></div>
-  </div>
-</section>
-
-<section class="section-padding bg-light" id="drive-bestanden">
-  <div class="container">
-    <div class="row"><div class="col-12 text-center">
-      <h2 class="section-title">🎬 Quinn's Video Momenten</h2>
-      <p class="section-subtitle">Bekijk mooie momenten rechtstreeks van Google Drive</p>
-    </div></div>
-    <div class="row g-4">
-      <!-- iframe video's -->
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1klQ2sGy9Zce9lAj_DBUOKSX90F3fsJqG/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1ku4N_2tZZ8EqWLm_vcQ5h5lU6QH6eFRJ/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1kwHs0HZeKhnHSjdl2YE-miXPmGNYLQt8/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1lvmTiSLDV0tetMTk9McAbKUYumR3rmCK/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1llLtynwrbAp7dy0j_5SYz44TJM97tgS-/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allow="autoplay; fullscreen"></iframe></div></div>
-      <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 border rounded shadow-sm"><iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container"><div class="row"><div class="col-12 text-center">
-    <p>© 2024 Quinn's 2e Verjaardag - Gemaakt met veel liefde door Papa &amp; Mama 💕</p>
-    <div class="footer-icons"><i class="fas fa-birthday-cake"></i><i class="fas fa-heart"></i><i class="fas fa-star"></i></div>
-  </div></div></div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-<script src="script.js"></script>
-
 </body>
 </html>
