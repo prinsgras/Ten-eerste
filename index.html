@@ -1,103 +1,155 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quinn Fotogalerij</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quinn is 2 Jaar - Wordt Binnenkort 3!</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Comic+Neue:wght@400;700&family=Sniglet&display=swap" rel="stylesheet">
+
+  <!-- Lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
   <style>
-    .gallery-img { width:100%; height:auto; border-radius:8px; transition:transform .3s; }
-    .gallery-img:hover { transform: scale(1.03); }
-    section { padding:50px 0; }
-    h2 { margin-bottom:25px; }
+    body {
+      font-family: 'Comic Neue', sans-serif;
+      padding-top: 80px;
+    }
+
+    /* Spelende regenboogletters */
+    .colorful-text {
+      background: linear-gradient(45deg, #ff6b6b, #fcd34d, #4ade80, #60a5fa, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: hue-rotate 6s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes hue-rotate {
+      from { filter: hue-rotate(0deg); }
+      to { filter: hue-rotate(360deg); }
+    }
+
+    /* Section titels */
+    .hero-title, .section-title {
+      font-family: 'Sniglet', cursive;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Zachte achtergrondkleuren */
+    .bg-light-blue    { background-color: #e0f7ff; }
+    .bg-light-yellow  { background-color: #fffbe6; }
+    .bg-light-green   { background-color: #e6ffe6; }
+    .bg-light-purple  { background-color: #f3e8ff; }
+
+    /* Ballonnen */
+    .birthday-balloon {
+      width: 50px;
+      height: 70px;
+      background: radial-gradient(circle, #ff99cc, #ff66b2);
+      border-radius: 50%;
+      animation: float 3s ease-in-out infinite;
+      position: absolute;
+      top: 20px;
+    }
+
+    .balloon-1 { left: 20%; animation-delay: 0s; }
+    .balloon-2 { left: 50%; animation-delay: 1s; }
+    .balloon-3 { left: 80%; animation-delay: 2s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .birthday-cake-icon {
+      font-size: 60px;
+      color: #f472b6;
+      animation: bounce 2s infinite;
+      position: relative;
+      top: 120px;
+      text-align: center;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#home"><i class="fas fa-child me-2"></i>Quinn groeit op!</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Thuis</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galerij"><i class="fas fa-images me-1"></i>Galerij</a></li>
-        <li class="nav-item"><a class="nav-link" href="#drive-bestanden"><i class="fas fa-video me-1"></i>Video's</a></li>
-      </ul>
+  <!-- Navigatie -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-child me-2"></i>Quinn groeit op!</a>
     </div>
-  </div>
-</nav>
-<div style="height:70px;"></div>
+  </nav>
 
-<section id="galerij" class="container">
-  <h1 class="text-center mb-5">Fotogalerij Quinn</h1>
-
-  <!-- Sectie: Rennen, Springen, Spelen (4+ rest) -->
-  <section>
-    <h2>Rennen, Springen, Spelen</h2>
-    <div class="row g-3">
-      <div class="col-md-3"><a href="Attached_assets/-20250417-WA0000.jpg" data-lightbox="rennen"><img src="Attached_assets/-20250417-WA0000.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250530-WA0005.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250530-WA0005.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250530-WA0007(1).jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250530-WA0007(1).jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250530-WA0008.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250530-WA0008.jpg" class="gallery-img" alt=""></a></div>
-
-      <!-- Rest onder rennen -->
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0006.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250603-WA0006.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0013.jpg" data-lightbox="rennen"><img src="Attached_assets/IMG-20250603-WA0013.jpg" class="gallery-img" alt=""></a></div>
+  <!-- Hero -->
+  <section class="hero-section text-center py-5" id="home">
+    <div class="container position-relative">
+      <div class="birthday-balloon balloon-1"></div>
+      <div class="birthday-balloon balloon-2"></div>
+      <div class="birthday-balloon balloon-3"></div>
+      <h1 class="hero-title display-4">
+        <span class="colorful-text">2</span> <span class="colorful-text">Jaar Quinn!</span>
+      </h1>
+      <p class="lead mt-3">Quinn is 2 jaar en wordt binnenkort 3!</p>
+      <div class="birthday-cake-icon"><i class="fas fa-birthday-cake"></i></div>
+      <p class="mt-4">
+        Welkom op Quinn's speciale website! Hij rent, speelt en groeit elke dag. Kijk mee hoe hij opgroeit!
+      </p>
+      <a href="#galerij" class="btn btn-primary mt-3"><i class="fas fa-images me-2"></i>Bekijk Foto's</a>
     </div>
   </section>
 
-  <!-- Sectie: Groot Worden -->
-  <section>
-    <h2>Groot Worden</h2>
-    <div class="row g-3">
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0002.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0002.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0003.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0003.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0004.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0004.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0005.jpg" data-lightbox="groot"><img src="Attached_assets/IMG-20250603-WA0005.jpg" class="gallery-img" alt=""></a></div>
+  <!-- Sectie: Dagje Uit -->
+  <section class="section-padding bg-light-blue py-5" id="dagje-uit">
+    <div class="container">
+      <h2 class="section-title text-center">Quinn op Avontuur</h2>
+      <p class="section-subtitle text-center mb-4">Buiten spelen, ontdekken en lachen</p>
+      <div class="row">
+        <div class="col-md-6">
+          <video class="img-fluid rounded mb-3" controls poster="assets/Photos/video-poster-dagjeuit.jpg">
+            <source src="assets/videos/Quinn_playing.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="col-md-6">
+          <p>Quinn rent door de speeltuin, klimt en lacht. Hij roept: "Kijk mama, ik kan het!" en straalt van trots. Elke dag is een nieuw avontuur vol energie en plezier.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Sectie: Samen Groeien -->
-  <section>
-    <h2>Samen Groeien</h2>
-    <div class="row g-3">
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0007.jpg" data-lightbox="groeien"><img src="Attached_assets/IMG-20250603-WA0007.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0008.jpg" data-lightbox="groeien"><img src="Attached_assets/IMG-20250603-WA0008.jpg" class="gallery-img" alt=""></a></div>
+  <!-- Sectie: Galerij -->
+  <section class="section-padding bg-light-purple py-5" id="galerij">
+    <div class="container text-center">
+      <h2 class="section-title">Alle Foto's</h2>
+      <p class="section-subtitle mb-4">Bekijk Quinn's mooiste momenten</p>
+      <div class="row justify-content-center g-3">
+        <div class="col-6 col-md-4 col-lg-3">
+          <a href="assets/Photos/IMG-20250528-WA0005.jpg" data-lightbox="gallery">
+            <img src="assets/Photos/IMG-20250528-WA0005.jpg" alt="Foto 1" class="img-fluid rounded" />
+          </a>
+        </div>
+        <!-- Voeg hier meer foto's toe -->
+      </div>
     </div>
   </section>
 
-  <!-- Sectie: Samen met Mama & Papa -->
-  <section>
-    <h2>Samen met Mama & Papa</h2>
-    <div class="row g-3">
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0009.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0009.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0010.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0010.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0011.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0011.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0014.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0014.jpg" class="gallery-img" alt=""></a></div>
-      <div class="col-md-3"><a href="Attached_assets/IMG-20250603-WA0015.jpg" data-lightbox="ouders"><img src="Attached_assets/IMG-20250603-WA0015.jpg" class="gallery-img" alt=""></a></div>
-    </div>
-  </section>
-</section>
-
-<section class="container section-padding bg-light" id="drive-bestanden">
-  <h2 class="text-center mb-4">🎬 Quinn's Video Momenten</h2>
-  <div class="row g-4">
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1klQ2sGy9Zce9lAj_DBUOKSX90F3fsJqG/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1ku4N_2tZZ8EqWLm_vcQ5h5lU6QH6eFRJ/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1kwHs0HZeKhnHSjdl2YE-miXPmGNYLQt8/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1ksN8R0LFQmvvtq8R8wlFMyiKJ6IKDj_m/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1lvmTiSLDV0tetMTk9McAbKUYumR3rmCK/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1llLtynwrbAp7dy0j_5SYz44TJM97tgS-/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1lj4tEkRNjQLPB_mrVGeUmqeEn8ER-8HO/preview" allow="autoplay; fullscreen"></iframe></div></div>
-    <div class="col-md-6 col-lg-3"><div class="ratio ratio-1x1 shadow-sm"><iframe src="https://drive.google.com/file/d/1lkG30FlxSm2fn2gupPxf_bLS8PM19r9O/preview" allow="autoplay; fullscreen"></iframe></div></div>
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 </body>
-</html>
+    </html>
