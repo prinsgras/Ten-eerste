@@ -1,155 +1,105 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quinn is 2 Jaar - Wordt Binnenkort 3!</title>
-
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Comic+Neue:wght@400;700&family=Sniglet&display=swap" rel="stylesheet">
-
-  <!-- Lightbox -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Greazy Clone</title>
   <style>
     body {
-      font-family: 'Comic Neue', sans-serif;
-      padding-top: 80px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-
-    /* Spelende regenboogletters */
-    .colorful-text {
-      background: linear-gradient(45deg, #ff6b6b, #fcd34d, #4ade80, #60a5fa, #a78bfa, #f472b6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: hue-rotate 6s linear infinite;
-      display: inline-block;
-    }
-
-    @keyframes hue-rotate {
-      from { filter: hue-rotate(0deg); }
-      to { filter: hue-rotate(360deg); }
-    }
-
-    /* Section titels */
-    .hero-title, .section-title {
-      font-family: 'Sniglet', cursive;
-    }
-
-    .section-subtitle {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
-    /* Zachte achtergrondkleuren */
-    .bg-light-blue    { background-color: #e0f7ff; }
-    .bg-light-yellow  { background-color: #fffbe6; }
-    .bg-light-green   { background-color: #e6ffe6; }
-    .bg-light-purple  { background-color: #f3e8ff; }
-
-    /* Ballonnen */
-    .birthday-balloon {
-      width: 50px;
-      height: 70px;
-      background: radial-gradient(circle, #ff99cc, #ff66b2);
-      border-radius: 50%;
-      animation: float 3s ease-in-out infinite;
-      position: absolute;
-      top: 20px;
-    }
-
-    .balloon-1 { left: 20%; animation-delay: 0s; }
-    .balloon-2 { left: 50%; animation-delay: 1s; }
-    .balloon-3 { left: 80%; animation-delay: 2s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-
-    .birthday-cake-icon {
-      font-size: 60px;
-      color: #f472b6;
-      animation: bounce 2s infinite;
-      position: relative;
-      top: 120px;
+    header {
+      background: #212121;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    .search-container {
+      padding: 20px;
+      text-align: center;
+    }
+    .search-container input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .results {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .map-container {
+      height: 400px;
+      margin: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigatie -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#"><i class="fas fa-child me-2"></i>Quinn groeit op!</a>
-    </div>
-  </nav>
+<header>
+  <h1>Greazy Clone</h1>
+  <p>Find your local garage</p>
+</header>
 
-  <!-- Hero -->
-  <section class="hero-section text-center py-5" id="home">
-    <div class="container position-relative">
-      <div class="birthday-balloon balloon-1"></div>
-      <div class="birthday-balloon balloon-2"></div>
-      <div class="birthday-balloon balloon-3"></div>
-      <h1 class="hero-title display-4">
-        <span class="colorful-text">2</span> <span class="colorful-text">Jaar Quinn!</span>
-      </h1>
-      <p class="lead mt-3">Quinn is 2 jaar en wordt binnenkort 3!</p>
-      <div class="birthday-cake-icon"><i class="fas fa-birthday-cake"></i></div>
-      <p class="mt-4">
-        Welkom op Quinn's speciale website! Hij rent, speelt en groeit elke dag. Kijk mee hoe hij opgroeit!
-      </p>
-      <a href="#galerij" class="btn btn-primary mt-3"><i class="fas fa-images me-2"></i>Bekijk Foto's</a>
-    </div>
-  </section>
+<div class="search-container">
+  <input type="text" id="search" placeholder="Search for garages..." oninput="filterResults()"/>
+</div>
 
-  <!-- Sectie: Dagje Uit -->
-  <section class="section-padding bg-light-blue py-5" id="dagje-uit">
-    <div class="container">
-      <h2 class="section-title text-center">Quinn op Avontuur</h2>
-      <p class="section-subtitle text-center mb-4">Buiten spelen, ontdekken en lachen</p>
-      <div class="row">
-        <div class="col-md-6">
-          <video class="img-fluid rounded mb-3" controls poster="assets/Photos/video-poster-dagjeuit.jpg">
-            <source src="assets/videos/Quinn_playing.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="col-md-6">
-          <p>Quinn rent door de speeltuin, klimt en lacht. Hij roept: "Kijk mama, ik kan het!" en straalt van trots. Elke dag is een nieuw avontuur vol energie en plezier.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="results" id="results">
+  <div class="card" data-name="Garage Amsterdam">
+    <h3>Garage Amsterdam</h3>
+    <p>Specialist in electric vehicles.</p>
+    <p>📍 Amsterdam</p>
+  </div>
+  <div class="card" data-name="Rotterdam Auto Service">
+    <h3>Rotterdam Auto Service</h3>
+    <p>Fast repairs & maintenance.</p>
+    <p>📍 Rotterdam</p>
+  </div>
+  <div class="card" data-name="Den Haag Repair Center">
+    <h3>Den Haag Repair Center</h3>
+    <p>Diagnostics and tuning.</p>
+    <p>📍 The Hague</p>
+  </div>
+</div>
 
-  <!-- Sectie: Galerij -->
-  <section class="section-padding bg-light-purple py-5" id="galerij">
-    <div class="container text-center">
-      <h2 class="section-title">Alle Foto's</h2>
-      <p class="section-subtitle mb-4">Bekijk Quinn's mooiste momenten</p>
-      <div class="row justify-content-center g-3">
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="assets/Photos/IMG-20250528-WA0005.jpg" data-lightbox="gallery">
-            <img src="assets/Photos/IMG-20250528-WA0005.jpg" alt="Foto 1" class="img-fluid rounded" />
-          </a>
-        </div>
-        <!-- Voeg hier meer foto's toe -->
-      </div>
-    </div>
-  </section>
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246115.45337210667!2d4.7284014!3d52.3791892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609a1c6cfb8e3%3A0x86585eb1eb47397d!2sAmsterdam!5e0!3m2!1sen!2snl!4v1617957397953!5m2!1sen!2snl"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>
+  function filterResults() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name').toLowerCase();
+      card.style.display = name.includes(query) ? 'block' : 'none';
+    });
+  }
+</script>
 
 </body>
-    </html>
+</html>
